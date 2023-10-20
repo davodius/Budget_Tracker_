@@ -6,20 +6,12 @@ public class BudgetTracker_ {
     public static void main(String[] args) {
         System.out.println("Welcome to the Budget Tracker! ");
 
-        // Initializing the user method
+        // Initializing and declaring the user method
         User.me();
-        //System.out.println(User.me());
+        System.out.println();
 
         // Declaring and initializing scanner below.
         Scanner scanner = new Scanner(System.in);
-
-        //System.out.println("What is your name? ");
-        //String firstname = scanner.nextLine();
-
-        //System.out.println("What is your lastname? ");
-        //String lastname = scanner.nextLine();
-
-        //System.out.println("Press the number of your choice in the menu " + firstname + " " + lastname +  ".");
 
         // Calling on and displaying the menu.
         new Menu();

@@ -18,6 +18,7 @@ public class BudgetTracker_ {
         System.out.println("What is your lastname? ");
         String lastname = scanner.nextLine();
 
+        System.out.println("Press the number of your choice in the menu " + firstname + " " + lastname + ".");
 
         // Calling on and displaying the menu.
         new Menu();
@@ -87,7 +88,7 @@ public class BudgetTracker_ {
 
             // Exiting program
             case "0":
-                System.out.println("Program is now exited ");
+                System.out.println("Program is now exited. ");
 
                 break;
         }

@@ -2,8 +2,8 @@ package org.example;
 
 public class User {
     public static void me() {
-        String firstName ;
-        String lastName ;
+        String firstName = "Anders ";
+        String lastName = "Anderson " ;
 
 
 

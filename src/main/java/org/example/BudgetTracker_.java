@@ -8,17 +8,18 @@ public class BudgetTracker_ {
 
         // Initializing the user method
         User.me();
+        //System.out.println(User.me());
 
         // Declaring and initializing scanner below.
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("What is your name? ");
-        String firstname = scanner.nextLine();
+        //System.out.println("What is your name? ");
+        //String firstname = scanner.nextLine();
 
-        System.out.println("What is your lastname? ");
-        String lastname = scanner.nextLine();
+        //System.out.println("What is your lastname? ");
+        //String lastname = scanner.nextLine();
 
-        System.out.println("Press the number of your choice in the menu " + firstname + " " + lastname + ".");
+        //System.out.println("Press the number of your choice in the menu " + firstname + " " + lastname +  ".");
 
         // Calling on and displaying the menu.
         new Menu();

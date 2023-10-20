@@ -1,15 +1,16 @@
 package org.example;
 
-import java.util.Scanner;
+import java.util.HashMap;
 
 public class incometest {
     public static void main(String[] args) {
 
-        //public void readFile()throws IOException {
+        {
+            HashMap<String, Integer> salary = new HashMap<>();
+            salary.put("Paycheck " ,1000000);
+            System.out.println(salary);
 
 
-
-        } {
 
         /*
        1. Skapa Income
@@ -27,15 +28,24 @@ public class incometest {
         Sen kan du lägga ihop de med din meny
 
        */
+            //private Map<String, User> userList;
+
+            //Scanner scanner = new Scanner(System.in);
+            //String input = scanner.nextLine();
+
+            //int paycheck;
+            //FileReader reader = new FileReader;
+            //FileReader();
+
+           // System.out.println("How much would you like to add? ");
 
 
-            System.out.println("How much would you like to add? ");
 
-            Scanner scanner = new Scanner(System.in);
-            String input = scanner.nextLine();
 
+
+
+            }
 
         }
-
 
     }

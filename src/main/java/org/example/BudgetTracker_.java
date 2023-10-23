@@ -8,7 +8,6 @@ public class BudgetTracker_ {
 
         // Initializing and declaring the user method
         User.me();
-        System.out.println();
 
         // Declaring and initializing scanner below.
         Scanner scanner = new Scanner(System.in);
@@ -16,10 +15,11 @@ public class BudgetTracker_ {
         // Calling on and displaying the menu.
         new Menu();
 
+        // Using scanner for choices in menu
         String input = scanner.nextLine();
 
 
-        // Switch menu to choose in
+        // Switch menu for the choices.
         switch (input) {
 
 

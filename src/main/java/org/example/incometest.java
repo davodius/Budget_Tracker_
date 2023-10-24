@@ -19,6 +19,9 @@ public class incometest {
     System.out.println("User List:");
     for(String name : payments.keySet()) {
     System.out.println("Key: " + name);
+
+
+
     public void savePayment(User user) throws IOException {
     payments.put(user.getUsername(), user);
     FileWriter fw = new FileWriter(new File(fileName));
@@ -76,4 +79,4 @@ public class incometest {
 
             }
 
-        }}
+        }}}}

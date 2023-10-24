@@ -1,34 +1,67 @@
 package org.example;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.*;
-import java.lang.reflect.Type;
-import java.util.Map;
-
 public class incometest {
+
+
+    IncomeStorage incomeStorage = new IncomeStorage();
+
+    incomeStorage.readFile();
+
+    incomeStorage.saveFile();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     private Map<String, User> payments;
     private String fileName = "src/main/payments.json";
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
     public void readFile() throws IOException {
+
     Type type = new TypeToken<Map<String, User>>(){}.getType();
+
     Reader reader = new FileReader(new File(fileName));
+
+    HashMap<String, Integer>
+
     payments = gson.fromJson(reader, type);
-    System.out.println("User List:");
+
+    System.out.println("Payment List:");
+
     for(String name : payments.keySet()) {
+
     System.out.println("Key: " + name);
 
-
-
     public void savePayment(User user) throws IOException {
+
     payments.put(user.getUsername(), user);
+
     FileWriter fw = new FileWriter(new File(fileName));
+
     gson.toJson(payments, fw);
+
     fw.close();
+
     System.out.println("Payment saved! ");
-    }
+    }*/
 
 
 
@@ -79,4 +112,4 @@ public class incometest {
 
             }
 
-        }}}}
+        }

@@ -1,27 +1,36 @@
 package org.example;
-import com.google.gson.Gson;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.*;
+import java.lang.reflect.Type;
+import java.util.Map;
 
 public class incometest {
+    private Map<String, User> payments;
+    private String fileName = "src/main/payments.json";
+    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    public void readFile() throws IOException {
+    Type type = new TypeToken<Map<String, User>>(){}.getType();
+    Reader reader = new FileReader(new File(fileName));
+    payments = gson.fromJson(reader, type);
+    System.out.println("User List:");
+    for(String name : payments.keySet()) {
+    System.out.println("Key: " + name);
+    public void savePayment(User user) throws IOException {
+    payments.put(user.getUsername(), user);
+    FileWriter fw = new FileWriter(new File(fileName));
+    gson.toJson(payments, fw);
+    fw.close();
+    System.out.println("Payment saved! ");
+    }
 
-    public static void main(String[] args) throws IOException {
-    Gson gson = new Gson();
 
-    // file path
-    String fileName = "src/main/income.json";
 
-    FileWriter fw  = new FileWriter(fileName);
 
-    Scanner scanner = new Scanner(System.in);
 
-    long income;
-
-    // Skapar en income
-    User income = new User();
-    income = 1000000 ;
 
 
 

@@ -1,7 +1,9 @@
 package org.example;
 import com.google.gson.Gson;
 
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class incometest {
 
@@ -11,8 +13,20 @@ public class incometest {
     // file path
     String fileName = "src/main/income.json";
 
+    FileWriter fw  = new FileWriter(fileName);
+
+    Scanner scanner = new Scanner(System.in);
+
+    long income;
+
     // Skapar en income
-    User income = new User(1, "Paycheck");
+    User income = new User();
+    income = 1000000 ;
+
+
+
+
+
 
 
     {
@@ -26,7 +40,7 @@ public class incometest {
        2.Börja jobba i IncomeStorage, när du testar gör gärna det i en typ testklass inte i din meny - ok.
          När du säker på att det funkar då kan du börja jobba med metoderna i menyn.
        3.I IncomeStorage ska du göra följande metoder:
-        readFile() - ok.
+        readFile()
         addIncome() testa den innan du lägger in menyn
         saveFile()
         removeIncome() kolla på kod exempel i modul 7 MapExample

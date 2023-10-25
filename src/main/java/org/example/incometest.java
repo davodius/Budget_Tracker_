@@ -1,81 +1,38 @@
 package org.example;
 
+import java.io.IOException;
+
 public class incometest {
 
+    public static void main(String[] args) throws IOException {
 
-    IncomeStorage incomeStorage = new IncomeStorage();
-
-    incomeStorage.readFile();
-
-    incomeStorage.saveFile();
-
-
+        // skapa instans av IncomeStorage
+        IncomeStorage incomeStorage = new IncomeStorage();
+        // läser in fil det första vi gör
+        incomeStorage.readFile();
 
 
+        //Income income = new Income("1", "20231025", 5000);
 
+        // skapa en Income med alla fält
+        // har kommenterat ut nu för du får fixa till Income och Transaction
+        // kolla printscreen jag skicka till dig
+        //Income income = new Income();
 
+        // när du skapat en Icome ska du testa din addIncome metod
+        // du skicka in income som du skapade här
+        //incomeStorage.addIncome(income);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*
-    private Map<String, User> payments;
-    private String fileName = "src/main/payments.json";
-    Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    public void readFile() throws IOException {
-
-    Type type = new TypeToken<Map<String, User>>(){}.getType();
-
-    Reader reader = new FileReader(new File(fileName));
-
-    HashMap<String, Integer>
-
-    payments = gson.fromJson(reader, type);
-
-    System.out.println("Payment List:");
-
-    for(String name : payments.keySet()) {
-
-    System.out.println("Key: " + name);
-
-    public void savePayment(User user) throws IOException {
-
-    payments.put(user.getUsername(), user);
-
-    FileWriter fw = new FileWriter(new File(fileName));
-
-    gson.toJson(payments, fw);
-
-    fw.close();
-
-    System.out.println("Payment saved! ");
-    }*/
-
-
-
-
-
-
-
+        // till sist testar du att spara
+        // kolla om du ser din income i din json fil!
+        incomeStorage.saveFile();
+    }
 
 
 
 
 
     {
-
     {
 
 
@@ -96,20 +53,10 @@ public class incometest {
         Sen kan du lägga ihop de med din meny
 
        */
-                    //private Map<String, User> userList;
 
-                    //Scanner scanner = new Scanner(System.in);
-                    //String input = scanner.nextLine();
-
-                    //int paycheck;
-                    //FileReader reader = new FileReader;
-                    //FileReader();
-
-                    // System.out.println("How much would you like to add? ");
-
-
-                }
-
-            }
 
         }
+
+    }
+
+}

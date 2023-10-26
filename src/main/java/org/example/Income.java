@@ -3,7 +3,7 @@ package org.example;
 public class Income extends Transaction{
 
     public Income(){
-        super(1, 20231026, 100);
+        super("1", "26102023", "100");
 
     }
 

@@ -3,9 +3,14 @@ package org.example;
 public class Income extends Transaction{
 
     public Income(){
-        super("1", "26102023", "100");
+        super("1", "26102023", 900);
 
     }
+
+
+
+
+
 
     private String id;
 

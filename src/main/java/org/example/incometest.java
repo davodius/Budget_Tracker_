@@ -12,7 +12,6 @@ public class incometest {
         incomeStorage.readFile();
 
 
-        //Income income = new Income("1", "20231025", 5000);
 
         // skapa en Income med alla fält
         // har kommenterat ut nu för du får fixa till Income och Transaction

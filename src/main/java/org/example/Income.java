@@ -7,10 +7,8 @@ public class Income {
     public String getId() {
         return id;
     }
-
     public void setId(String id) {
         this.id = id;
-
     }
 
 
@@ -21,7 +19,15 @@ public class Income {
     }
     public void setDate(String date) {
         this.date = date;
+    }
 
+    private String amount;
+
+    public String getAmount() {
+        return amount;
+    }
+    public void setAmount(String amount) {
+        this.amount = amount;
     }
 
 

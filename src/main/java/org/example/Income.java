@@ -7,9 +7,6 @@ public class Income extends Transaction{
 
     }
 
-
-
-
     private String id;
 
     public String getId() {

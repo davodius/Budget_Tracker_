@@ -11,7 +11,6 @@ public class incometest {
         // läser in fil det första vi gör
         incomeStorage.readFile();
 
-        Income income = new Income();
 
 
         // skapa en Income med alla fält

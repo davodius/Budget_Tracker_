@@ -4,10 +4,9 @@ public class Transaction {
 
 private String id;
 private String date;
-private String amount;
+private double amount;
 
-
-    public Transaction(String id, String date, String amount) {
+    public Transaction(String id, String date, double amount) {
         this.id = id;
         this.date = date;
         this.amount = amount;
@@ -18,7 +17,8 @@ private String amount;
         return "Transaction{" +
                 "id='" + id + '\'' +
                 ", date='" + date + '\'' +
-                ", amount='" + amount + '\'' +
+                ", amount=" + amount +
                 '}';
     }
 }
+

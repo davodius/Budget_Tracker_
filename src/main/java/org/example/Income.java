@@ -2,7 +2,11 @@ package org.example;
 
 public class Income extends Transaction{
 
-    public Income(){
+    public Income(String id, String date, double amount){
+        super("1", "31102023", 1000);
+    }
+}
+ /*   public Income(){
         super("1", "26102023", 900);
 
     }
@@ -44,4 +48,4 @@ public class Income extends Transaction{
 
 
 
-}
+}*/

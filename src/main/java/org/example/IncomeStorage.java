@@ -15,7 +15,7 @@ public class IncomeStorage {
     // här säger vi att vår key ska vara av datatypen String => Map<String, >
     // sen säger vi att värdet ska vara vår Income klass => Map<String, Income>
     // alla värden kommer sparas som key value pairs, alltså en nyckel och ett värde för den nyckeln
-    private String fileName = "src/main/income.json";
+    private String fileName = "src/main/java/org/example/income.json";
 
 
 
@@ -24,7 +24,6 @@ public class IncomeStorage {
     public IncomeStorage() {
     }
 
-    // METOD FÖR ATT LÄSA IN FIL, KÖR FÖRST I PROGRAMMET ANANRS BLIR DET ERROR
     public void readFile() throws IOException {
         Type type = new TypeToken<Map<String, User>>(){}.getType();
         // vi typar om vår map för att det ska bli lättare mellan java och json
@@ -55,4 +54,10 @@ public class IncomeStorage {
         incomeList.put(income.getId(), income);
         System.out.println("Income added");
     }
+
+    public void removeIncome(String id){
+            incomeList.remove(id);
+            System.out.println("Income removed!");
+    }
 }
+

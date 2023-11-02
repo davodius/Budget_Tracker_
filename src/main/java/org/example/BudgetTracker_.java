@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class BudgetTracker_ {
     public static void main(String[] args) throws IOException  {
+
+
+
         System.out.println("Welcome to the Budget Tracker! ");
 
         // Initializing and declaring the user method
@@ -32,8 +35,8 @@ public class BudgetTracker_ {
 
             // Adding earning(s) to account
             case "1":
+                try {
 
-                //  System.out.println("nr1");
                 System.out.println("Please add id:");
                 String id = scanner.nextLine();
 
@@ -46,20 +49,24 @@ public class BudgetTracker_ {
 
                 // Skapar en ny income av all user input data
                 Income income = new Income(id, date, amount);
+                //Income income1 = new Income("0", "23232323", 0);
+                    incomeStorage.readFile();
 
                 incomeStorage.addIncome(income);
-
-
                 incomeStorage.saveFile();
+                    System.out.println("Income added!");
 
-                System.out.println("Income added!");
+                } catch (Exception e){
+                    System.out.println("Income was not added");
+                }
+
 
                 break;
 
 
             // Subtracting expense(s) from the account
             case "2":
-                System.out.println("Which id to you want to remove?");
+                System.out.println("Which id do you want to remove?");
                 String idToRemove = scanner.nextLine();
                 incomeStorage.removeIncome(idToRemove);
                 //incomeStorage.saveFile();

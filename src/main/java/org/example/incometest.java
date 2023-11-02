@@ -11,7 +11,11 @@ public class incometest {
         // läser in fil det första vi gör
         incomeStorage.readFile();
 
+        Income income = new Income("1" ,"232323", 100);
+        incomeStorage.addIncome(income);
+        //incomeStorage.removeIncome(income.getId());
 
+        incomeStorage.saveFile();
 
         // skapa en Income med alla fält
         // har kommenterat ut nu för du får fixa till Income och Transaction
@@ -24,7 +28,6 @@ public class incometest {
 
         // till sist testar du att spara
         // kolla om du ser din income i din json fil!
-        incomeStorage.saveFile();
     }
 
 

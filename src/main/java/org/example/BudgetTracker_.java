@@ -1,9 +1,10 @@
 package org.example;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class BudgetTracker_ {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException  {
         System.out.println("Welcome to the Budget Tracker! ");
 
         // Initializing and declaring the user method
@@ -22,7 +23,7 @@ public class BudgetTracker_ {
         IncomeStorage incomeStorage = new IncomeStorage();
 
         // läser in fil
-        incomeStorage.readFile();
+        //incomeStorage.readFile();
 
 
         // Switch menu for the choices.
@@ -31,22 +32,27 @@ public class BudgetTracker_ {
 
             // Adding earning(s) to account
             case "1":
+
                 //  System.out.println("nr1");
                 System.out.println("Please add id:");
                 String id = scanner.nextLine();
+
                 System.out.println("Please add date:");
                 String date = scanner.nextLine();
+
                 System.out.println("Enter amount for income:");
                 double amount = scanner.nextDouble();
-                // tagit emot all user input
-                // så då skapar vi en ny income av all user input data
-                Income income = new Income();
-                // hårdkodad
-                // Income income1 = new Income("2", "20231027", 2000);
-                // lägg till
+                // tar emot user input
+
+                // Skapar en ny income av all user input data
+                Income income = new Income(id, date, amount);
+
                 incomeStorage.addIncome(income);
-                //spara
+
+
                 incomeStorage.saveFile();
+
+                System.out.println("Income added!");
 
                 break;
 
@@ -56,7 +62,7 @@ public class BudgetTracker_ {
                 System.out.println("Which id to you want to remove?");
                 String idToRemove = scanner.nextLine();
                 incomeStorage.removeIncome(idToRemove);
-                incomeStorage.saveFile();
+                //incomeStorage.saveFile();
 
                 break;
 

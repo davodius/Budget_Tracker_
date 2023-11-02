@@ -26,7 +26,7 @@ public class BudgetTracker_ {
         IncomeStorage incomeStorage = new IncomeStorage();
 
         // läser in fil
-        //incomeStorage.readFile();
+        incomeStorage.readFile();
 
 
         // Switch menu for the choices.
@@ -49,12 +49,11 @@ public class BudgetTracker_ {
 
                 // Skapar en ny income av all user input data
                 Income income = new Income(id, date, amount);
-                //Income income1 = new Income("0", "23232323", 0);
-                    incomeStorage.readFile();
+                incomeStorage.readFile();
 
                 incomeStorage.addIncome(income);
                 incomeStorage.saveFile();
-                    System.out.println("Income added!");
+
 
                 } catch (Exception e){
                     System.out.println("Income was not added");
@@ -66,10 +65,13 @@ public class BudgetTracker_ {
 
             // Subtracting expense(s) from the account
             case "2":
+                incomeStorage.readFile();
+
                 System.out.println("Which id do you want to remove?");
+                System.out.println();
                 String idToRemove = scanner.nextLine();
                 incomeStorage.removeIncome(idToRemove);
-                //incomeStorage.saveFile();
+                incomeStorage.saveFile();
 
                 break;
 

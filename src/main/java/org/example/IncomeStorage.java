@@ -52,7 +52,7 @@ public class IncomeStorage {
     // först måste du se till att du kan skapa en Income!
     public void addIncome(Income income) {
         incomeList.put(income.getId(), income);
-        System.out.println("Income added");
+        System.out.println("Income added!");
     }
 
     public void removeIncome(String id){

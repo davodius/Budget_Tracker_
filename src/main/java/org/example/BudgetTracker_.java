@@ -52,6 +52,7 @@ public class BudgetTracker_ {
                 incomeStorage.readFile();
 
                 incomeStorage.addIncome(income);
+                income.setCategory(EIncomeCategory.PAYCHECK);
                 incomeStorage.saveFile();
 
 
@@ -68,7 +69,7 @@ public class BudgetTracker_ {
                 incomeStorage.readFile();
 
                 System.out.println("Which id do you want to remove?");
-                System.out.println();
+                System.out.println(EIncomeCategory.PAYCHECK);
                 String idToRemove = scanner.nextLine();
                 incomeStorage.removeIncome(idToRemove);
                 incomeStorage.saveFile();

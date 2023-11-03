@@ -2,9 +2,8 @@ package org.example;
 
 public enum EIncomeCategory {
 
-    EINCOMECATEGORY, PAYCHECK;
+    PAYCHECK;
 
-private EIncomeCategory EINCOMECATEGORY;
 
 
 

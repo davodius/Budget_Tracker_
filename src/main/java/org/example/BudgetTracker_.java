@@ -47,12 +47,14 @@ public class BudgetTracker_ {
                 double amount = scanner.nextDouble();
                 // tar emot user input
 
+
+                scanner.reset();
                 // Skapar en ny income av all user input data
                 Income income = new Income(id, date, amount);
-                incomeStorage.readFile();
+                //incomeStorage.readFile();
 
                 incomeStorage.addIncome(income);
-                income.setCategory(EIncomeCategory.PAYCHECK);
+                //income.setCategory(EIncomeCategory.PAYCHECK);
                 incomeStorage.saveFile();
 
 
@@ -69,7 +71,7 @@ public class BudgetTracker_ {
                 incomeStorage.readFile();
 
                 System.out.println("Which id do you want to remove?");
-                System.out.println(EIncomeCategory.PAYCHECK);
+                //System.out.println(EIncomeCategory.PAYCHECK);
                 String idToRemove = scanner.nextLine();
                 incomeStorage.removeIncome(idToRemove);
                 incomeStorage.saveFile();

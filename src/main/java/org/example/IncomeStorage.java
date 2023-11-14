@@ -25,7 +25,7 @@ public class IncomeStorage {
     }
 
     public void readFile() throws IOException {
-        Type type = new TypeToken<Map<String, User>>(){}.getType();
+        Type type = new TypeToken<Map<String, Income>>(){}.getType();
         // vi typar om vår map för att det ska bli lättare mellan java och json
         // det här behöver ske först i applikationen, så läs in det första du gör
         Reader reader = new FileReader(new File(fileName));
@@ -58,6 +58,9 @@ public class IncomeStorage {
     public void removeIncome(String id){
             incomeList.remove(id);
             System.out.println("Income removed!");
+    }
+    public double totalIncome() throws IOException {
+        return incomeList.values().stream().mapToDouble(Income::getAmount).sum();
     }
 }
 

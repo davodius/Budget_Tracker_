@@ -4,9 +4,10 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class BudgetTracker_ {
+
     public static void main(String[] args) throws IOException  {
 
-
+try {
 
         System.out.println("Welcome to the Budget Tracker! ");
 
@@ -16,116 +17,126 @@ public class BudgetTracker_ {
         // Declaring and initializing scanner below.
         Scanner scanner = new Scanner(System.in);
 
-        // Calling on and displaying the menu.
-        new Menu();
-
-        // Using scanner for choices in menu
-        String input = scanner.nextLine();
-
-        // skapad instans av IncomeStorage för att komma åt metoder
-        IncomeStorage incomeStorage = new IncomeStorage();
-
-        // läser in fil
-        incomeStorage.readFile();
+      while (true) {
+          // Calling on and displaying the menu.
+          new Menu();
 
 
-        // Switch menu for the choices.
-        switch (input) {
+          // Using scanner for choices in menu
+          String input = scanner.nextLine();
 
 
-            // Adding earning(s) to account
-            case "1":
-                try {
+          // skapad instans av IncomeStorage för att komma åt metoder
+          IncomeStorage incomeStorage = new IncomeStorage();
 
-                System.out.println("Please add id:");
-                String id = scanner.nextLine();
-
-                System.out.println("Please add date:");
-                String date = scanner.nextLine();
-
-                System.out.println("Enter amount for income:");
-                double amount = scanner.nextDouble();
-                // tar emot user input
+          // läser in fil
+          incomeStorage.readFile();
 
 
-                scanner.reset();
-                // Skapar en ny income av all user input data
-                Income income = new Income(id, date, amount);
-                //incomeStorage.readFile();
-
-                incomeStorage.addIncome(income);
-                //income.setCategory(EIncomeCategory.PAYCHECK);
-                incomeStorage.saveFile();
+          // Switch menu for the choices.
+          switch (input) {
 
 
-                } catch (Exception e){
-                    System.out.println("Income was not added");
-                }
+              // Adding earning(s) to account
+              case "1":
+                  try {
+
+                      System.out.println("Please add id:");
+                      String id = scanner.nextLine();
+
+                      System.out.println("Please add date:");
+                      String date = scanner.nextLine();
+
+                      System.out.println("Enter amount for income:");
+                      double amount = scanner.nextDouble();
+                      // tar emot user input
 
 
-                break;
+                      scanner.reset();
+                      // Skapar en ny income av all user input data
+                      Income income = new Income(id, date, amount);
+                      //incomeStorage.readFile();
+
+                      incomeStorage.addIncome(income);
+                      //income.setCategory(EIncomeCategory.PAYCHECK);
+                      incomeStorage.saveFile();
 
 
-            // Subtracting expense(s) from the account
-            case "2":
-                incomeStorage.readFile();
-
-                System.out.println("Which id do you want to remove?");
-                //System.out.println(EIncomeCategory.PAYCHECK);
-                String idToRemove = scanner.nextLine();
-                incomeStorage.removeIncome(idToRemove);
-                incomeStorage.saveFile();
-
-                break;
+                  } catch (Exception e) {
+                      System.out.println("Income was not added");
+                  }
 
 
-            // Show account balance
-            case "3":
-                System.out.println("nr3");
-
-                break;
+                  break;
 
 
-            // Reviewing expenses
-            case "4":
-                System.out.println("nr4");
+              // Subtracting expense(s) from the account
+              case "2":
+                  incomeStorage.readFile();
 
-                break;
+                  System.out.println("Which id do you want to remove?");
+                  //System.out.println(EIncomeCategory.PAYCHECK);
+                  String idToRemove = scanner.nextLine();
+                  incomeStorage.removeIncome(idToRemove);
+                  incomeStorage.saveFile();
 
-
-            // Change a previous earning
-            case "5":
-                System.out.println("nr5");
-
-                break;
-
-
-            // Change a previous expense
-            case "6":
-                System.out.println("nr6");
-
-                break;
+                  break;
 
 
-            // Remove a previous earning
-            case "7":
-                System.out.println("nr7");
+              // Show account balance
+              case "3":
+                  System.out.println(incomeStorage.totalIncome());
 
-                break;
-
-
-            // Remove a previous expense
-            case "8":
-                System.out.println("nr8");
-
-                break;
+                  break;
 
 
-            // Exiting program
-            case "0":
-                System.out.println("Program is now exited. ");
+              // Reviewing expenses
+              case "4":
+                  System.out.println("nr4");
 
-                break;
-        }
+                  break;
+
+
+              // Change a previous earning
+              case "5":
+                  System.out.println("nr5");
+
+                  break;
+
+
+              // Change a previous expense
+              case "6":
+                  System.out.println("nr6");
+
+                  break;
+
+
+              // Remove a previous earning
+              case "7":
+                  System.out.println("nr7");
+
+                  break;
+
+
+              // Remove a previous expense
+              case "8":
+                  System.out.println("nr8");
+
+                  break;
+
+
+              // Exiting program
+              case "0":
+                  System.out.println("Program is now exited. ");
+
+                  break;
+              default:
+
+                  System.out.println("incorrectly input value");
+                  break;
+          }
+      }
+    } catch (Exception e){
+        System.out.println("Incorrect input");
     }
-}
+}}
